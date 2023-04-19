@@ -35,12 +35,12 @@ public class Village {
 
 	public Gaulois trouverHabitant(String nomGaulois) {
 		Gaulois gaulois = null;
-		if (nomGaulois.equals(chef.getNom())) {
+		if (chef.getNom().equals(nomGaulois)) {
 			gaulois = chef;
 		} else {
 			for (int i = 0; i < nbVillageois; i++) {
 				Gaulois habitant = villageois[i];
-				if (habitant.getNom().equals(nomGaulois)) {
+				if (habitant != null && habitant.getNom().equals(nomGaulois)) {
 					gaulois = habitant;
 				}
 			}
